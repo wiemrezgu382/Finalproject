@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="W (2).png" alt="Logo de la boutique" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-container">
+                <button id="favorites-btn" class="favorites-btn" aria-label="Voir les favoris">❤️ Favoris (0)</button>
+                <button id="cart-btn" class="cart-btn" aria-label="Voir le panier">🛒 Panier (0)</button>
+                <div id="cart" class="cart hidden">
+                    <h2>Panier</h2>
+                    <ul id="cart-items" aria-label="Articles dans le panier"></ul>
+                    <p>Total: <span id="total-price">0</span> €</p>
+                    <button id="checkout-btn" class="checkout-btn">Passer à la caisse</button>
+                    <button id="clear-cart-btn" class="clear-cart-btn">Vider le panier</button> <!-- Nouveau bouton -->
+                </div>
+                <div id="favorites" class="favorites hidden">
+                    <h2>Favoris</h2>
+                    <ul id="favorites-items" aria-label="Articles dans les favoris"></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <h1>Bienvenue sur notre boutique en ligne</h1>
+            <p>Découvrez nos produits de qualité</p>
+        </div>
+    </section>
+    
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2>Catégories</h2>
+            <ul class="category-list">
+                <li><a href="#category1">Catégorie 1</a></li>
+                <li><a href="#category2">Catégorie 2</a></li>
+                <li><a href="#category3">Catégorie 3</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <main id="products">
+        <div class="container">
+            <h2>Nos Produits</h2>
+            <div class="products-grid">
+                <!-- Carte produit 1 -->
+                <article class="product-card">
+                    <img src="palette-eyeface--bloom-baby-bloom--02-rose.jpg" alt="Produit 1 - Description brève" class="product-img">
+                    <h3 class="product-title">face palette</h3>
+                    <p class="product-description">Ne contient pas d'ingrédients d'origine animale. Approuvé par PETA comme ne faisant pas de test sur les animaux.</p>
+                    <p class="product-price">25 €</p>
+                    <label for="quantity-1">Quantité:</label>
+                    <input type="number" id="quantity-1" name="quantity" min="1" max="10" value="1">
+                    <button class="add-to-cart" data-name="Produit 1" data-price="25" data-id="1">Acheter</button>
+                    <button class="add-to-favorites" data-name="Produit 1" data-id="1" aria-label="Ajouter aux favoris">❤️</button>
+                </article>
+
+                <!-- Carte produit 2 -->
+                <article class="product-card">
+                    <img src="palette-fard-à-paupière--regal-romance-.jpg" alt="Produit 2 - Description brève" class="product-img">
+                    <h3 class="product-title">eye palette</h3>
+                    <p class="product-description">Ne contient pas d'ingrédients d'origine animale. Approuvé par PETA comme ne faisant pas de test sur les animaux.</p>
+                    <p class="product-price">40 €</p>
+                    <label for="quantity-2">Quantité:</label>
+                    <input type="number" id="quantity-2" name="quantity" min="1" max="10" value="1">
+                    <button class="add-to-cart" data-name="Produit 2" data-price="40" data-id="2">Acheter</button>
+                    <button class="add-to-favorites" data-name="Produit 2" data-id="2" aria-label="Ajouter aux favoris">❤️</button>
+                </article>
+
+                <!-- Carte produit 3 -->
+                <article class="product-card">
+                    <img src="1823647-Revolution-Rose-Light-Blush-Drops-Pink-Rosie-1.jpg" alt="Produit 3 - Description brève" class="product-img">
+                    <h3 class="product-title">liquid blush</h3>
+                    <p class="product-description">Ne contient pas d'ingrédients d'origine animale. Approuvé par PETA comme ne faisant pas de test sur les animaux.</p>
+                    <p class="product-price">35 €</p>
+                    <label for="quantity-3">Quantité:</label>
+                    <input type="number" id="quantity-3" name="quantity" min="1" max="10" value="1">
+                    <button class="add-to-cart" data-name="Produit 3" data-price="35" data-id="3">Acheter</button>
+                    <button class="add-to-favorites" data-name="Produit 3" data-id="3" aria-label="Ajouter aux favoris">❤️</button>
+                </article>
+
+                <!-- Carte produit 4 -->
+                <article class="product-card">
+                    <img src="1x1_NIKA-CC_511_RVB_Skin-Silk_Oct232482310.jpg" alt="Produit 4 - Description brève" class="product-img">
+                    <h3 class="product-title">fondation</h3>
+                    <p class="product-description">Ne contient pas d'ingrédients d'origine animale. Approuvé par PETA comme ne faisant pas de test sur les animaux.</p>
+                    <p class="product-price">50 €</p>
+                    <label for="quantity-4">Quantité:</label>
+                    <input type="number" id="quantity-4" name="quantity" min="1" max="10" value="1">
+                    <button class="add-to-cart" data-name="Produit 4" data-price="10" data-id="4">Acheter</button>
+                    <button class="add-to-favorites" data-name="Produit 4" data-id="4" aria-label="Ajouter aux favoris">❤️</button>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WR Boutique - Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
